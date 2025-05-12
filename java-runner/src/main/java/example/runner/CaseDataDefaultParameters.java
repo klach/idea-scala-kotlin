@@ -4,6 +4,7 @@ import example.java.ParametersReflection;
 import example.kotlin.KotlinDefaults;
 import example.kotlin.KotlinFile;
 import example.kotlin.KotlinMutFile;
+import example.kotlin.KotlinRecordFile;
 import example.lombok.LombokFile;
 import example.scala.ScalaDefaults;
 import example.scala.ScalaFile;
@@ -32,6 +33,10 @@ class CaseDataDefaultParameters implements Runnable {
         kotlinFile1.getName();
 //        kotlinFile1.isExecutable(); // the only problem
         kotlinFile1.getExecutable();
+
+        KotlinRecordFile kotlinRecordFile = new KotlinRecordFile("n1", "e1", "l1", true);
+        kotlinRecordFile.name();
+        kotlinRecordFile.executable();
 
 
 

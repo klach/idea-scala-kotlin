@@ -7,7 +7,7 @@ subprojects {
     apply plugin: 'com.github.ben-manes.versions'
     apply plugin: 'java-library'
 
-    sourceCompatibility = 1.8
+    sourceCompatibility = 17
 
     repositories {
 //        maven { url "http://dl.bintray.com/kotlin/kotlin-eap-1.1" }

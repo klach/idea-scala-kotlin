@@ -5,6 +5,12 @@ data class KotlinFile(val name: String,
                       val location: String,
                       val executable: Boolean)
 
+@JvmRecord
+data class KotlinRecordFile(val name: String,
+                            val extension: String,
+                            val location: String,
+                            val executable: Boolean)
+
 
 
 
