@@ -1,21 +1,21 @@
 plugins {
     id 'com.github.ben-manes.versions' version '0.17.0' apply false
-    id 'com.github.johnrengelman.shadow' version '2.0.1' apply false
+    id 'com.github.johnrengelman.shadow' version '8.1.1' apply false
 }
 
 subprojects {
     apply plugin: 'com.github.ben-manes.versions'
-    apply plugin: 'java'
+    apply plugin: 'java-library'
 
     sourceCompatibility = 1.8
 
     repositories {
-        maven { url "http://dl.bintray.com/kotlin/kotlin-eap-1.1" }
+//        maven { url "http://dl.bintray.com/kotlin/kotlin-eap-1.1" }
         mavenCentral()
     }
 
     dependencies {
-        testCompile group: 'junit', name: 'junit', version:'4.12'
+        testImplementation group: 'junit', name: 'junit', version:'4.12'
     }
 
     tasks.withType(JavaCompile) {
@@ -43,7 +43,7 @@ subprojects {
                 println String.format(formatString, "ALL", sumBytes / 1024)
             }
         }
-        tasks.remove(run)
-        tasks.remove(distTar)
+//        tasks.remove(run)
+//        tasks.remove(distTar)
     }
 }

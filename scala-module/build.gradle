@@ -2,12 +2,12 @@ apply plugin: "scala"
 apply plugin: "jacoco"
 
 dependencies {
-    compile project(":java-module")
-    compile 'org.scala-lang:scala-library:2.12.5'
+    api project(":java-module")
+    api 'org.scala-lang:scala-library:2.13.16'
 }
 
 jacoco {
-    toolVersion = "0.8.0"
+    toolVersion = "0.8.13"
 }
 
 test.finalizedBy jacocoTestReport
