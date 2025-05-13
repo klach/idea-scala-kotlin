@@ -59,6 +59,11 @@ class CaseDataDefaultParameters implements Runnable {
         System.err.println(KotlinDefaults.createFile("other-name"));
         System.err.println(KotlinDefaults.createFile());
 
+//        System.err.println(KotlinDefaults.createFileWithoutOverloads$default("other-name", "other-ext", "/tmp", true, 0, null));
+//        System.err.println(KotlinDefaults.createFileWithoutOverloads$default("other-name", "other-ext", null, false, 12, null));
+//        System.err.println(KotlinDefaults.createFileWithoutOverloads$default("other-name", null, null, false, 14, null));
+//        System.err.println(KotlinDefaults.createFileWithoutOverloads$default(null, null, null, false, 15, null));
+
         ScalaDefaults.use();
         KotlinDefaults.INSTANCE.use();
 

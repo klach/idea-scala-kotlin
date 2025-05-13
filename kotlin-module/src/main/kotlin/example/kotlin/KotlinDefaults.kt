@@ -39,10 +39,22 @@ object KotlinDefaults {
         return KotlinFile(name, extension, location, executable)
     }
 
+    @JvmStatic
+    fun createFileWithoutOverloads(name: String = "removeme",
+                                   extension: String = "",
+                                   location: String = "/tmp",
+                                   executable : Boolean = false): KotlinFile {
+        return KotlinFile(name, extension, location, executable)
+    }
+
     fun use() {
         createFile()
         createFile("named", "txt")
         createFile(location = "/var/tmp")
+
+        createFileWithoutOverloads()
+        createFileWithoutOverloads("named", "txt")
+        createFileWithoutOverloads(location = "/var/tmp")
 
 
 
