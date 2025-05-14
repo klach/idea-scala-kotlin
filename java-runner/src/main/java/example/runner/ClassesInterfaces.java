@@ -82,10 +82,8 @@ class ClassesInterfaces implements Runnable {
 
         @Override
         public void reset() {
-            // https://youtrack.jetbrains.com/issue/KT-4779
-            // this is not needed in Scala version of this class
-            System.err.println("I shouldn't need to override this!");
-//            KotlinButton.super.reset(); // default implementation not accessible
+            KotlinButton.super.reset(); // default implementation is accessible
+            KotlinButton.DefaultImpls.reset(this); // thanks to '-Xjvm-default=all-compatibility'
         }
     }
 
